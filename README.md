@@ -1,4 +1,4 @@
 # insight-global
 # For slides see https://github.com/sbtalk71/java-core/tree/master/slides
 
-# Assignment link : https://classroom.github.com/a/a086jqhs
+# Assignment link :https://classroom.github.com/a/jEAjvZdp
