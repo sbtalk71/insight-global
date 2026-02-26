@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: emp-service
+server:
+  port: 8081
