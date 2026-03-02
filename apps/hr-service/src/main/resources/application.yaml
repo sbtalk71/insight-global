@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: hr-service
+server:
+  port: 9091

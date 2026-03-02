@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: rest-clients
+server:
+  port: 9090

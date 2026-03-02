@@ -1,5 +1,11 @@
 spring:
   application:
     name: emp-service
+  datasource:
+    url: jdbc:mysql://localhost:3307/training
+    username: root
+    password: root
+  jpa:
+    show_sql: true
 server:
   port: 8081
