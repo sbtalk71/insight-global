@@ -8,19 +8,20 @@ import org.springframework.web.client.RestClient;
 @Service
 public class HrService {
 
-    private RestClient restClient;
+    private RestClient.Builder restClientBuilder;
 
-    public HrService(RestClient restClient) {
-        this.restClient = restClient;
+    public HrService(RestClient.Builder restClientBuilder) {
+        this.restClientBuilder = restClientBuilder;
     }
 
     public EmpDTO getEmDetails(Integer id){
 
-      EmpDTO empDTO =  restClient.get()
-                .uri("http://localhost:8081/emp/"+id)
+      EmpDTO empDTO = restClientBuilder.build().get()
+                .uri("http://emp-service/emp/"+id)
                 .accept(MediaType.APPLICATION_JSON)
                 .retrieve()
                 .body(EmpDTO.class);
+        System.out.println("Load balancer : "+restClientBuilder.build().getClass().getName());
       return empDTO;
     }
 }
