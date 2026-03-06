@@ -1,0 +1,30 @@
+server:
+  port: 9191
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      server:
+        webmvc:
+          routes:
+            - id: emp-service
+              uri: lb://emp-service
+              predicates:
+                Path=/emp/**
+
+            - id: hr-service
+              uri: lb://hr-service
+              predicates:
+                Path=/hr/**
+
+            - id: test-service
+              uri: http://www.google.co.in
+              predicates:
+                Path=/test/**
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
