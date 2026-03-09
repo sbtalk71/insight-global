@@ -59,8 +59,8 @@ kubectl delete svc myapp
 ## 7. ConfigMap Commands
 ```sh
 kubectl create configmap app-config --from-literal=env=prod 
-kubectl get
-configmap kubectl describe configmap app-config 
+kubectl get configmap
+kubectl describe configmap app-config 
 kubectl delete configmap app-config
 ```
 ## 8. Secret Commands
@@ -120,7 +120,8 @@ kubectl autoscale deployment myapp --cpu-percent=50 --min=1 --max=10
 ```
 ## 17. Get All Resources
 ```sh
-kubectl get all kubectl get all -n kube-system
+kubectl get all
+kubectl get all -n kube-system
 ```
 ## 18. Delete Resources
 ```sh
