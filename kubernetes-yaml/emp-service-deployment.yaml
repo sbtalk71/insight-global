@@ -24,16 +24,20 @@ spec:
         app: emp-service
     spec:
       containers:
-      - env:
-        - name: DB_NAME
+      - name: emp-service
+        image: sbtalk71/emp-service:v2
+        imagePullPolicy: IfNotPresent
+        
+        env:
+        - name: DATABASE
           valueFrom:
             configMapKeyRef:
               key: DB_NAME
               name: emp-service-config
-        - name: DB_HOSTNAME
+        - name: DB_HOST
           valueFrom:
             configMapKeyRef:
-              key: DB_HOSTNAME
+              key: DB_HOST
               name: emp-service-config
         - name: DB_PASSWORD
           valueFrom:
@@ -45,14 +49,12 @@ spec:
             configMapKeyRef:
               key: DB_PORT
               name: emp-service-config
-        - name: DB_USERNAME
+        - name: DB_USER
           valueFrom:
             configMapKeyRef:
-              key: DB_USERNAME
+              key: DB_USER
               name: emp-service-config
-      - image: sbtalk71/emp-service:3.0
-        imagePullPolicy: IfNotPresent
-        name: emp-service
+      
        
       restartPolicy: Always
       
@@ -68,9 +70,9 @@ metadata:
 spec:
   
   ports:
-  - port: 8080
+  - port: 8081
     protocol: TCP
-    targetPort: 8080
+    targetPort: 8081
   selector:
     app: emp-service
   sessionAffinity: None
