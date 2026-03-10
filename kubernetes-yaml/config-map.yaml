@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+data:
+  DB_NAME: springdb
+  DB_HOSTNAME: mysql
+  DB_PORT: "3306"
+  DB_USERNAME: root
+metadata:
+  name: emp-service-config
+  namespace: default
