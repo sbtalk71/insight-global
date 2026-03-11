@@ -27,7 +27,6 @@ spec:
       - name: emp-service
         image: sbtalk71/emp-service:v2
         imagePullPolicy: IfNotPresent
-        
         env:
         - name: DATABASE
           valueFrom:
@@ -70,10 +69,10 @@ metadata:
 spec:
   
   ports:
-  - port: 8081
+  - port: 80
     protocol: TCP
     targetPort: 8081
   selector:
     app: emp-service
   sessionAffinity: None
-  type: LoadBalancer
+  type: ClusterIP
