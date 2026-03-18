@@ -9,6 +9,20 @@ spring:
     show_sql: true
 server:
   port: 8081
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  datadog:
+    metrics:
+      export:
+        apiKey: 0b6ce7c75db45c44cf7f3f58ea9d1398
+        uri: https://api.us5.datadoghq.com
+        step: 5s
+logging:
+  level:
+    root: DEBUG
 
 eureka:
   client:

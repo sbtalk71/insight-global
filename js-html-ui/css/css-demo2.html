@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .container {
+      position: relative;   /* Parent reference for absolute positioning */
+      width: 500px;
+      height: 200px;
+      border: 2px solid gray;
+    }
+    .box1 {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 200px;
+      height: 150px;
+      background-color: lightcoral;
+      text-align: center;
+      line-height: 150px;
+    }
+    .box2 {
+      position: absolute;
+      top: 20px;
+      left: 240px;   /* Push it to the right of box1 */
+      width: 200px;
+      height: 150px;
+      background-color: lightseagreen;
+      text-align: center;
+      line-height: 150px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box1">Box 1</div>
+    <div class="box2">Box 2</div>
+  </div>
+</body>
+</html>

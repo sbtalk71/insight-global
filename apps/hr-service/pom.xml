@@ -69,6 +69,7 @@
 		</dependencies>
 	</dependencyManagement>
 	<build>
+		<finalName>hr-service</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
