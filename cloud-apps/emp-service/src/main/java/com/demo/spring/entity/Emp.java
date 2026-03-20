@@ -1,14 +1,12 @@
 package com.demo.spring.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name="EMPLOYEE")
 public class Emp {
     @Id
+    //@GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name="EMPNO")
     private Integer empId;
 
