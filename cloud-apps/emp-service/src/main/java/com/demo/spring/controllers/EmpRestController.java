@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/emp")
+@CrossOrigin()
 public class EmpRestController {
 
     private EmpService empService;
