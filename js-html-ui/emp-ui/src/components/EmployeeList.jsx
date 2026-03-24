@@ -13,7 +13,7 @@ export function EmployeeList() {
     useEffect(() => {
         axios.get("http://localhost:8081/emp")
             .then(response => setEmployees(response.data))
-            .catch(err => navigate("/error",err));
+            .catch(err => navigate("/error",{state:{error:err}}));
     }, []);
 
     const handleRowClick=(id)=>{
