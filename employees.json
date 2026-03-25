@@ -4,61 +4,71 @@
       "id": "100",
       "name": "Shantanu",
       "city": "Hyderabad",
-      "salary": 70000
+      "salary": 70000,
+	  "role":"manager"
     },
     {
       "id": "101",
       "name": "Ranga",
       "city": "Hyderabad",
-      "salary": 60000
+      "salary": 60000,
+	  "role":"developer"
     },
     {
       "id": "102",
       "name": "Pretham",
       "city": "Hyderabad",
-      "salary": 90000
+      "salary": 90000,
+	  "role":"accountant"
     },
     {
       "id": "103",
       "name": "Dinesh",
       "city": "Bangalore",
-      "salary": 60000
+      "salary": 60000,
+	  "role":"ceo"
     },
     {
       "id": "104",
       "name": "Raja",
       "city": "Bangalore",
-      "salary": 70000
+      "salary": 70000,
+	  "role":"developer"
     },
     {
       "id": "105",
       "name": "Tushar",
       "city": "Bangalore",
-      "salary": 70000
+      "salary": 70000,
+	  "role":"manager"
     },
     {
       "id": "106",
       "name": "Ashish",
       "city": "Bangalore",
-      "salary": 90000
+      "salary": 90000,
+	  "role":"architect"
     },
     {
       "id": "107",
       "name": "Karan",
       "city": "Mumbai",
-      "salary": 70000
+      "salary": 70000,
+	  "role":"manager"
     },
     {
       "id": "108",
       "name": "Tirumala",
       "city": "Hyderabad",
-      "salary": 60000
+      "salary": 60000,
+	  "role":"developer"
     },
     {
       "id": "109",
       "name": "Chitra",
       "city": "Chennai",
-      "salary": 70000
+      "salary": 70000,
+	  "role":"manager"
     }
   ]
 }
