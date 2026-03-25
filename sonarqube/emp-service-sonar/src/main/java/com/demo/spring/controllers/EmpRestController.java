@@ -16,6 +16,7 @@ public class EmpRestController {
 
     private EmpService empService;
 
+    public EmpRestController(){}
     public EmpRestController(EmpService empService) {
         this.empService = empService;
     }
