@@ -1,0 +1,36 @@
+services:
+  eureka-server:
+    image: eureka-server:1.0
+    container_name: eureka-server
+    expose:
+    - "8761"
+    ports: 
+    - 8761:8761 
+  emp-service:
+    image: emp-service:1.0
+    #container_name: emp-service
+    depends_on:
+     - eureka-server
+     - mariadb-service
+    ports:
+    - 8080
+    environment:
+      EUREKA_HOST: eureka-server
+      DB_USER: root
+      DB_PASSWORD: root     
+      DB_HOST: mariadb
+      
+    links: 
+        - eureka-server
+        - mariadb-service
+  mariadb-service:
+    image: mariadb:10.6-ubi
+    container_name: mariadb
+    volumes:
+     - d://mysql//data:/var/lib/mysql
+    ports:
+    - 3307:3306
+    environment:
+     MYSQL_ROOT_PASSWORD: root     
+     
+    

@@ -1,0 +1,33 @@
+Image:
+docker image ls: lists docker images
+docker image ls -a: lists all images
+docker image rm [-f]: remove image from registry
+
+Container:
+docker container ls : lists all running containers
+docker container ls -a : lists all running and dead containers
+docker container rm [-f] <container id or name>: removes container
+
+docker ps: lists app running container processes
+
+Lab1 : running busybox in interactive mode where it starts shell sh and gets a unique name and also removes the container upon exit:
+docker run --rm --name node1 -it busybox sh
+
+Lab2: run nginx web server on local port 3000 and remove the containeromn exit. Run it in detached mode.
+
+docker run --rm --name mywebserver -p 3000:80  -d nginx
+
+get the logs from running container:
+docker logs mywebserver
+
+inspect a running container for details:
+docker container inspect mywebserver
+
+get an interactive shell from a running container
+docker exec -it mywebserver sh
+
+To build an image:
+1. write your Dockerfile in the root folder
+2. docker build -t your-repo:tag localtion of Dockerfile
+
+example : docker build -t eureka-server:1.0 .
